@@ -1,0 +1,178 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  /*background:url(../assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;*/
+
+  /* background: img no-repeat top center cover */
+  background: var(--bg-url);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Google Sans Flex", sans-serif;
+}
+
+body *{
+  font-family: "Google Sans Flex", sans-serif;
+  color: var(--text-color);
+}
+/*a base de tudo*/
+#container{
+  width:360px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 56px;
+}
+
+/* Profile */
+
+#profile{
+  text-align: center;
+  padding: 24px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+#profile img{
+  width: 112px;
+  display: block;
+  margin: auto;   
+}
+/*@ do criador da pagina*/
+#profile p{
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+  padding: 24px ;
+}
+
+/*switch*/
+
+#switch{
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#switch button{
+  width: 32px;
+  height: 32px;
+  background: white;
+  border: 0;
+  border-radius: 50%;
+  background-image: var(--switch-bg-url);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  top: 50%; 
+  transform: translateY(-50%);  
+}
+
+.light #switch button{
+  right: 0;
+  left:initial;
+}
+
+#switch span{
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--sufarce-color);
+  border: 1px solid  var(--stroke-color);
+  /*!!!!!Tem que colocar o webkit para funcionar em navagadores especificos!!!!!!!*/
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+
+}
+
+/*Links*/
+ul{
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  padding: 24px 0;
+}
+
+ul li a{
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  /*rgba = red, green, blue, auto(transparencia)*/
+  background: var(--sufarce-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  /*Para ajustar o negrito da fonte da palavra*/
+  font-weight: 500;
+  /*transição não é no hover | background é oque vai ser transicionado*/
+  transition: background 0.2s;
+}
+/*selector*/
+ul li a:hover{
+  background: var(--sufarce-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+#social-links{
+  display: flex;
+  /*para ficar na mesma linha*/
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /*margin-top: 56px;*/
+  padding: 24px 0;
+  font-size: 24px;
+}
+
+#social-links a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  padding: 16px;
+  border-radius: 50%;
+}
+
+#social-links a:hover{
+  background: var(--hightlight-color);
+  padding: 16px;
+  
+}
+
+footer{
+  padding: 24px 0;
+  text-align: center;
+}
+
+:root{
+  --text-color: white;
+  --bg-url: url(../assets/bg-mobile.jpg);
+  --stroke-color:rgba(255,255,255,0.5);
+  --sufarce-color: rgba(255,255,255,0.05);
+  --surface-color-hover:rgba(0,0,0,0.02);
+  --hightlight-color: rgba(255,255,255,0.2);
+  --switch-bg-url:url(../assets/moon-stars.svg);
+}
+
+.light{
+  --text-color: black;
+  --bg-url: url(../assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0,0,0,0.5);
+  --sufarce-color: rgba(0,0,0,0.05);
+  --surface-color-hover:rgba(0,0,0,0.02);
+  --hightlight-color: rgba(0,0,0,0.1);
+  --switch-bg-url:url(../assets/sun.svg);
+}
