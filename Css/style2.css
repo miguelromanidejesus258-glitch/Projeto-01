@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+IE:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background: url(../assets/bg-desktop.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1500px;
+  color: black;
+  font-family: "Google Sans Flex", sans-serif;
+}
+
+#Center-of-all-login-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.Center-of-all-login-profile{
+  border: 2px solid gold;
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  display: block;
+  text-align: center;
+}
+
+img{
+  width: 112px;
+  display: block;
+  margin: auto;
+}
+
+.login-information{
+  margin-top: 15px;
+  margin-bottom: 25px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#Center-of-all-login-container .inputs-container input{
+  padding: 10px;
+  gap: 13px;
+  margin: auto;
+  margin-bottom: 13px;
+  width: 250px;
+  box-sizing: border-box;
+}
+
+.inputs-container {
+  display: flex;
+  flex-direction: column; /* Coloca um embaixo do outro */
+  align-items: center;    /* Centraliza na horizontal */
+  gap: 13px;              /* Dá o espaçamento entre eles */
+}
+#Center-of-all-login-container .Center-of-all-login-profile input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  transition: border 0.2s;
+  width: 280px;           /* Largura ideal para os campos */
+  box-sizing: border-box; /* Evita que o padding estoure o tamanho */
+}
+
+/* Seleciona o botão que está logo após os inputs */
+#Center-of-all-login-container .Center-of-all-login-profile button {
+  width: 280px;           /* Mesma largura dos inputs para alinhar */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+p{
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+#Center-of-all-login-container .Center-of-all-login-profile input:hover{
+  border: 1px solid gold;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(4px);
+}
+
+#Center-of-all-login-container .Center-of-all-login-profile .inputs-container button{
+  border-radius: 12px;
+  border: 1px solid rgb(145, 123, 0);
+  transition: border 0.2s;
+}
+
+#Center-of-all-login-container .Center-of-all-login-profile .inputs-container button:hover{
+  border: 2px solid rgb(255, 217, 0);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
+
+#Center-of-all-login-container .Center-of-all-login-profile .inputs-container a{
+  text-decoration: none;
+  color: black;
+}
+
+::placeholder{
+  color: black;
+  transition: color 0.3s;
+}
+
+::placeholder:hover{
+  color: gold;
+}
+
+:root{
+  --fundo-branco:white;
+}
+
+.light{
+  --fundo-branco: white;
+}
+
+.inputs-container a{
+  display: block;
+}

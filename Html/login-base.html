@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página de login">
+  <title>Login</title>
+  <link rel="stylesheet" href="../Css/login-base.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo-principal">Ir para o conteúdo</a>
+
+  <header class="cabecalho">
+    <div class="cabecalho__container">
+      <a href="/" class="cabecalho__logo" aria-label="Página inicial">
+        <span class="cabecalho__logo-texto">Minha App</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="principal">
+    <section class="login" aria-labelledby="titulo-login">
+      <div class="login__card">
+        <header class="login__cabecalho">
+          <h1 id="titulo-login" class="login__titulo">Entrar na sua conta</h1>
+          <p class="login__subtitulo">
+            Use seu e-mail e senha para acessar o sistema.
+          </p>
+        </header>
+
+        <!-- action e method: ajuste quando conectar ao backend -->
+        <p
+          id="feedback-login"
+          class="login__feedback"
+          role="status"
+          aria-live="polite"
+          hidden
+        ></p>
+
+        <form
+          class="login__formulario"
+          action="/api/login"
+          method="post"
+          novalidate
+        >
+          <fieldset class="login__campos">
+            <legend class="visually-hidden">Credenciais de acesso</legend>
+
+            <div class="campo">
+              <label class="campo__rotulo" for="email">E-mail</label>
+              <input
+                class="campo__entrada"
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="username"
+                placeholder="seu@email.com"
+                required
+                aria-required="true"
+                aria-describedby="erro-email"
+              >
+              <span class="campo__erro" id="erro-email" role="alert" hidden></span>
+            </div>
+
+            <div class="campo">
+              <label class="campo__rotulo" for="senha">Senha</label>
+              <input
+                class="campo__entrada"
+                type="password"
+                id="senha"
+                name="senha"
+                autocomplete="current-password"
+                placeholder="••••••••"
+                minlength="4"
+                required
+                aria-required="true"
+                aria-describedby="erro-senha"
+              >
+              <span class="campo__erro" id="erro-senha" role="alert" hidden></span>
+            </div>
+
+            <div class="login__opcoes">
+              <label class="checkbox">
+                <input
+                  class="checkbox__entrada"
+                  type="checkbox"
+                  id="lembrar"
+                  name="lembrar"
+                  value="1"
+                >
+                <span class="checkbox__texto">Lembrar de mim</span>
+              </label>
+              <a class="login__link" href="recuperar-senha.html">Esqueci minha senha</a>
+            </div>
+          </fieldset>
+
+          <button class="botao botao--primario" type="submit">
+            Entrar
+          </button>
+        </form>
+
+        <footer class="login__rodape">
+          <p class="login__cadastro">
+            Ainda não tem conta?
+            <a class="login__link" href="cadastro.html">Criar conta</a>
+          </p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape-pagina">
+    <p class="rodape-pagina__texto">&copy; 2026 Minha App. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="../Js/login-base.js" defer></script>
+</body>
+</html>

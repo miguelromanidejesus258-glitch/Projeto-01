@@ -74,13 +74,14 @@ body *{
   z-index: 1;
   top: 50%; 
   transform: translateY(-50%);  
+  cursor: pointer;
 }
 
 .light #switch button{
   right: 0;
   left:initial;
+  cursor: pointer;
 }
-
 #switch span{
   display: block;
   width: 64px;
