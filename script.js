@@ -7,11 +7,11 @@ function toogleMode(){
   html.classList.toggle("light")
   if (html.classList.contains("light")) {
     //se tiver light troca a imagem
-    img.setAttribute("src", "../assets/Perfil.jpeg")
+    img.setAttribute("src", "Perfil.jpeg")
     img.setAttribute("alt", "Uma foto de um cara de óculos escuro no fundo azul e meio branco")
   } else {
     // se não tiver light permança a imagem
-    img.setAttribute("src", "../assets/Perfil2.jpeg")
-    img.setAttribute("alt", "uma foto de um cara sorrindo em um fundo amarelo")
+    img.setAttribute("src", "Perfil2.jpeg")
+    img.setAttribute("alt", "uma foto de um cara sentado")
   }
 }
