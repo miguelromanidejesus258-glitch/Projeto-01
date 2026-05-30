@@ -1,6 +1,6 @@
 # Projeto Dev
 
-![preview](./.github/preview.png)
+![preview](./assets/preview.png)
 
 > Dev Links
 
