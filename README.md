@@ -14,7 +14,7 @@ projeto graituito, exclusivo e promovido pela a Rocketseat. Para ensinos de tecn
 - HTML
 - CSS
 - Git e Github
--figma
+- figma
 
 ## Projeto
 
